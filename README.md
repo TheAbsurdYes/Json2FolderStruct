@@ -6,15 +6,15 @@ astfel: fiecare cheie care are ca valoare un dictionar este un director iar dict
 iar fiecare cheie care are ca valoare un string reprezinta un fisier iar string-ul respectiv este
 continutul fisierului. Scriptul va crea in folderul dat ca argument directoarele si fisierele conform dictionarului din JSON.   
 
-**INPUT**: create_structure.py root_folder_path structure_json_file_path
-Exemplu de dictionar:
+**INPUT**: create_structure.py root_folder_path structure_json_file_path   
+Exemplu de dictionar:  
 {“dir1” : {“dir2”: {“file1”: “continut1”, “file2”: “continut2”}, “file3”: “continut3”}, “file4”: “continut4”}  
 
 **OUTPUT**:
-root_folder
----dir1
-------dir2
----------file1: continut1
----------file2: continut2
-------file3: continut3
----file4: continut4
+root_folder  
+---dir1    
+------dir2    
+---------file1: continut1    
+---------file2: continut2    
+------file3: continut3     
+---file4: continut4     
