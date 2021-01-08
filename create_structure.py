@@ -11,8 +11,10 @@ def create_project(d,path):
             create_project(d[key],new_path)             # parcurgem recursiv dictionarul gasit
             os.chdir(path)                              # iesim din new_path schimband cu path-ul anterior
         else:                                           # creeaza si scrie fisierul
-            f = open(key,'w') 
-            f.write(d[key])
-            f.close()
+            if (d[key][:2] == "\\x"): 
+                with open(key,"wb") as f: 
+                    f.write(bytes(d[key].encode()))
+            else: 
+                with open(key,'w') as f: f.write(d[key]) 
  
 create_project(dictionar,os.path.abspath(sys.argv[1]))
